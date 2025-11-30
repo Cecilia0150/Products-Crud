@@ -52,11 +52,12 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        /*NOTA: DEBEMOS DE AÑADIR UNA PANTALLA PARA EL ERROR,
+        /*NOTA: DEBEMOS DE AÑADIR UNA PANTALLA PARA EL ERROR, 
+        Lo eliminaré porque es redundante con la pantalla 404 que ya existe.
         */
-        if(!$product->exists){
+        /*if(!$product->exists){
             abort(404, 'Producto no encontrado. :c');
-        }
+        }*/
         $categories = Category::orderBy('name')->get();
         return view('products.edit', compact('product', 'categories'));
     }

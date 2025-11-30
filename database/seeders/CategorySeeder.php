@@ -1,5 +1,7 @@
 <?php
-
+/*Para insertar el dato en específico en la base de datos, ejecutar el siguiente comando:
+php artisan db:seed --class=CategorySeeder --force
+*/
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
